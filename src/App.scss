@@ -1,0 +1,19 @@
+@import "@styles";
+
+.section {
+  margin-top: d(4);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    
+    li {
+      width: 50%;
+      padding: d(2);
+      
+      @include mq($s-medium) {
+        width: calc(100% / 3);
+      }
+    }
+  }
+}

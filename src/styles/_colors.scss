@@ -1,0 +1,38 @@
+/* stylelint-disable max-empty-lines */
+//-------------------------------------------------------------------
+// Colors
+//-------------------------------------------------------------------
+
+// Grayscale
+//-------------------------------------------------------------------
+
+$white          : #FFFFFF;
+$gray-xx-light  : #F6F6F6;
+$gray-x-light   : #DBE0EB;
+$gray-light     : #ABADB5;
+$gray-medium    : #525F7A;
+$gray-dark      : #454A54;
+$gray-x-dark    : #2E3038;
+$gray-xx-dark   : #17181C;
+$black          : #000000;
+
+// Theme Colors
+//-------------------------------------------------------------------
+
+$color-primary      : #3852FF;
+
+// Font Colours
+//-------------------------------------------------------------------
+
+@mixin fc-dark-strong {
+  color: $gray-x-dark;
+}
+@mixin fc-dark {
+  color: $gray-medium;
+}
+@mixin fc-light-strong {
+  color: $white;
+}
+@mixin fc-light {
+  color: $gray-x-light;
+}

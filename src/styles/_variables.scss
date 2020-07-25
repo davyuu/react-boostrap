@@ -1,0 +1,60 @@
+/* stylelint-disable max-empty-lines */
+//-------------------------------------------------------------------
+// Dimensions
+//-------------------------------------------------------------------
+
+$d-base: 8px;
+
+@function d($scale) {
+  @return $d-base * $scale;
+}
+
+// Screen Sizes
+//-------------------------------------------------------------------
+
+$s-medium: d(96);
+$s-small: d(65);
+
+
+
+//-------------------------------------------------------------------
+// Shadows
+//-------------------------------------------------------------------
+
+$shadow: 0 4px 8px 0 rgba($black, .2);
+$shadow-thick: 0 8px 16px 0 rgba($black, .2);
+
+
+
+//-------------------------------------------------------------------
+// Timing and Easings
+//-------------------------------------------------------------------
+
+$t       : .35s;
+$t-snap  : cubic-bezier(.3, .9, .4, .98);
+$t-drift : cubic-bezier(.05, .31, .7, 1);
+$t-shine : cubic-bezier(.96, .43, .55, .8);
+
+// Transitions
+//-------------------------------------------------------------------
+
+@mixin transition-slow($properties:all) {
+  transition: $properties $t*1.5 $t-drift;
+  will-change: auto;
+}
+@mixin transition-fast($properties:all) {
+  transition: $properties $t $t-snap;
+  will-change: auto;
+}
+
+
+
+//-------------------------------------------------------------------
+// Media Queries
+//-------------------------------------------------------------------
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

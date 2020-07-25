@@ -1,0 +1,16 @@
+/* stylelint-disable no-eol-whitespace */
+//-------------------------------------------------------------------
+// Helpers
+//-------------------------------------------------------------------
+
+@mixin page-padding {
+  padding: d(4);
+  
+  @include mq($s-small) {
+    padding: d(7) d(10);
+  }
+  
+  @include mq($s-medium) {
+    padding: d(10) d(20);
+  }
+}

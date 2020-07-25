@@ -1,0 +1,19 @@
+@import '@styles/_reset';
+@import '@styles';
+
+// HTML Set Up
+//-------------------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: $fs-medium;
+  font-family: $f-family-primary;
+  background-color: $gray-xx-light;
+}
