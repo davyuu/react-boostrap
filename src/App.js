@@ -1,13 +1,15 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        test
-      </div>
-    );
-  }
+function App(props) {
+  const [counter, setCounter] = useState(0)
+  return (
+    <>
+        <div>
+            {counter}
+        </div>
+        <button onClick={() => setCounter(counter + 1)}>Testing</button>
+    </>
+  );
 }
 
 export default App;
